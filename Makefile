@@ -15,6 +15,7 @@ lint:  ## Check code with ruff
 format:  ## Format code with ruff
 	uv run ruff format .
 
-clean:  ## Remove caches
+clean:  ## Remove caches and the virtual environment
 	find . -name __pycache__ -not -path "./.venv/*" -prune -exec rm -rf {} +
 	rm -rf .mypy_cache .ruff_cache
+	rm -rf .venv/
